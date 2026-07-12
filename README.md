@@ -26,27 +26,17 @@ The project also includes:
 
 ---
 
-# 🏗️ High Level Architecture
-
-![High Level Architecture](architecture/High Level )
+ 
 
 ---
 
-# 🔧 Low Level Design
+![High Level Architecture](Architecture/High_Level_Architecture.png)
 
-![Low Level Design](architecture/Low Level Design )
+![Low Level Design](Architecture/Low_Level_Design.png)
 
----
+![Star Schema](Architecture/Star_Schema.png)
 
-# ⭐ Star Schema
-
-![Star Schema](architecture/Star Schema)
-
----
-
-# 📋 List of Tables
-
-![Tables](architecture/List Of Tables)
+![List of Tables](Architecture/List_Of_Tables.png)
 
 ---
 
