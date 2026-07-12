@@ -1,0 +1,8 @@
+SELECT
+CASE
+    WHEN sentiment_score IS NULL THEN 'Missing Sentiment'
+    ELSE 'Available Sentiment'
+END AS sentiment_status,
+COUNT(*) AS total_records
+FROM socialmedia_databricks.gold.fact_social_media
+GROUP BY sentiment_status;

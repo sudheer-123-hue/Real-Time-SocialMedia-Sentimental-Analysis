@@ -1,0 +1,5 @@
+SELECT
+verified,
+COUNT(*) total_users
+FROM socialmedia_databricks.gold.dim_user
+GROUP BY verified;

@@ -1,0 +1,8 @@
+SELECT
+    t.topic_category,
+    COUNT(*) AS total_tweets
+FROM socialmedia_databricks.gold.fact_social_media f
+JOIN socialmedia_databricks.gold.dim_topic t
+ON f.topic_key=t.topic_key
+GROUP BY t.topic_category
+ORDER BY total_tweets DESC;

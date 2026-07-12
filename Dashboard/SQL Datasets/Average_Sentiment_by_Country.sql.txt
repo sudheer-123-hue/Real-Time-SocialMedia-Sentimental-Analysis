@@ -1,0 +1,8 @@
+SELECT
+u.country,
+ROUND(AVG(f.sentiment_score),2) average_sentiment
+FROM socialmedia_databricks.gold.fact_social_media f
+JOIN socialmedia_databricks.gold.dim_user u
+ON f.user_id=u.user_id
+GROUP BY u.country
+ORDER BY average_sentiment DESC;

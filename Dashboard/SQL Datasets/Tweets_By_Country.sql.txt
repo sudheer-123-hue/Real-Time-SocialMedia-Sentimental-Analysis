@@ -1,0 +1,6 @@
+SELECT
+country,
+COUNT(*) total_tweets
+FROM socialmedia_databricks.gold.dim_user
+GROUP BY country
+ORDER BY total_tweets DESC;

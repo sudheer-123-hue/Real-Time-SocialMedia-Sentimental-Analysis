@@ -1,0 +1,2 @@
+SELECT *
+FROM socialmedia_databricks.gold.kpi_dashboard;

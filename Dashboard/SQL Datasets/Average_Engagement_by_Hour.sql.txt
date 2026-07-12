@@ -1,0 +1,6 @@
+SELECT
+    HOUR(timestamp_1) AS activity_hour,
+    ROUND(AVG(engagement),2) AS avg_engagement
+FROM socialmedia_databricks.gold.stg_tweets
+GROUP BY HOUR(timestamp_1)
+ORDER BY activity_hour;

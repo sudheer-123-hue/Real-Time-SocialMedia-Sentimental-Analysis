@@ -1,0 +1,16 @@
+SELECT
+CASE
+    WHEN tweet_text IN ('"""NaN"""', 'Null?? value??', 'Testing!!!@@@###')
+         OR topic_category = '"""NAN"""'
+    THEN 'Invalid'
+    ELSE 'Valid'
+END AS tweet_status,
+COUNT(*) AS total_tweets
+FROM socialmedia_databricks.gold.stg_valid_tweets
+GROUP BY
+CASE
+    WHEN tweet_text IN ('"""NaN"""', 'Null?? value??', 'Testing!!!@@@###')
+         OR topic_category = '"""NAN"""'
+    THEN 'Invalid'
+    ELSE 'Valid'
+END;

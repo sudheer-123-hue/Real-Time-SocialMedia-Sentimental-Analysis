@@ -1,0 +1,6 @@
+SELECT
+HOUR(timestamp_1) activity_hour,
+COUNT(*) total_tweets
+FROM socialmedia_databricks.gold.stg_tweets
+GROUP BY HOUR(timestamp_1)
+ORDER BY activity_hour;

@@ -1,0 +1,6 @@
+SELECT
+    user_id,
+    followers_count
+FROM socialmedia_databricks.gold.dim_user
+ORDER BY followers_count DESC
+LIMIT 10;
