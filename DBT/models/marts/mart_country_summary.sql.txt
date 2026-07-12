@@ -1,0 +1,27 @@
+{{ config(
+    materialized='table'
+) }}
+
+SELECT
+
+    u.country,
+
+    COUNT(f.tweet_id) AS total_tweets,
+
+    SUM(f.likes) AS total_likes,
+
+    SUM(f.impressions) AS total_impressions,
+
+    SUM(f.engagement_count) AS total_engagement,
+
+    AVG(f.sentiment_score) AS avg_sentiment
+
+FROM {{ ref('fact_social_media') }} f
+
+JOIN {{ ref('dim_user') }} u
+
+ON f.user_id = u.user_id
+
+GROUP BY
+
+u.country

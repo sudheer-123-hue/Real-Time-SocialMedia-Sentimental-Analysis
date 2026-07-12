@@ -1,0 +1,37 @@
+{{ config(
+    materialized='table'
+) }}
+
+SELECT
+
+    d.tweet_date,
+
+    COUNT(f.tweet_id) AS total_tweets,
+
+    SUM(f.likes) AS total_likes,
+
+    SUM(f.retweets) AS total_retweets,
+
+    SUM(f.replies) AS total_replies,
+
+    SUM(f.impressions) AS total_impressions,
+
+    SUM(f.engagement_count) AS total_engagement,
+
+    AVG(f.sentiment_score) AS avg_sentiment,
+
+    SUM(CASE WHEN f.sentiment_score > 0 THEN 1 ELSE 0 END) AS positive_tweets,
+
+    SUM(CASE WHEN f.sentiment_score < 0 THEN 1 ELSE 0 END) AS negative_tweets,
+
+    SUM(CASE WHEN f.sentiment_score = 0 THEN 1 ELSE 0 END) AS neutral_tweets
+
+FROM {{ ref('fact_social_media') }} f
+
+JOIN {{ ref('dim_date') }} d
+
+ON f.date_key = d.date_key
+
+GROUP BY
+
+d.tweet_date

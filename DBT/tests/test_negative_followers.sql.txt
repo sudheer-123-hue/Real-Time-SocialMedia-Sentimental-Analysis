@@ -1,0 +1,4 @@
+SELECT *
+FROM {{ ref('fact_social_media') }}
+WHERE sentiment_score < -1
+   OR sentiment_score > 1

@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: silver
+    database: socialmedia_databricks
+    schema: silver
+    tables:
+      - name: silver_valid_tweets
+      - name: silver_sentiment
+      - name: silver_trends
+      - name: silver_user_metadata
+      - name: silver_tweets

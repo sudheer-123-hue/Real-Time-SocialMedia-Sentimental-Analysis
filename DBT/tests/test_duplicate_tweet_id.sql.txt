@@ -1,0 +1,4 @@
+SELECT tweet_id, COUNT(*) AS cnt
+FROM {{ ref('fact_social_media') }}
+GROUP BY tweet_id
+HAVING COUNT(*) > 1

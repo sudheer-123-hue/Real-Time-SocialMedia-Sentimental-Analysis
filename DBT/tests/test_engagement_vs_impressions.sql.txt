@@ -1,0 +1,3 @@
+SELECT *
+FROM {{ ref('fact_social_media') }}
+WHERE engagement_count > impressions
