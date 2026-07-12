@@ -30,14 +30,13 @@ The project also includes:
 
 ---
 
-![High Level Architecture](Architecture/High_Level_Architecture.png)
+![High Level Architecture](Architecture/High%20Level%20Architecture.png)
 
-![Low Level Design](Architecture/Low_Level_Design.png)
+![Low Level Design](Architecture/Low%20Level%20Design.png)
 
-![Star Schema](Architecture/Star_Schema.png)
+![Star Schema](Architecture/Star%20Schema.png)
 
-![List of Tables](Architecture/List_Of_Tables.png)
-
+![List of Tables](Architecture/List%20Of%20Tables.png)
 ---
 
 # 🛠 Technology Stack
