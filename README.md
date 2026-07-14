@@ -53,7 +53,7 @@ The project also includes:
 | Catalog | Unity Catalog |
 | Workflow | Databricks Workflows |
 | Orchestration | Apache Airflow |
-| Reporting | Power BI |
+| Reporting | Databricks dashboard |
 | Notifications | Slack |
 | Testing | dbt Tests, PyTest |
 | Language | Python, SQL |
@@ -75,7 +75,7 @@ Real-Time-Social-Media-Sentiment-Analysis
 │   ├── bronze/
 │   ├── silver/
 │   ├── gold/
-│   └── common/
+│   └── common/logging
 │
 ├── dbt/
 │   ├── models/
@@ -85,15 +85,17 @@ Real-Time-Social-Media-Sentiment-Analysis
 │
 ├── airflow/
 │
-├── datasets/
+├── datasets/raw
 │
 ├── dashboards/
 │
 ├── screenshots/
+└── Real-time-social_media_sentimental_analysis.pptx
 │
 ├── docs/
 │
 └── README.md
+ 
 ```
 
 ---
@@ -104,30 +106,13 @@ The project processes real-time social media streaming data.
 
 ### Source Files
 
-- Tweets
-- User Metadata
-- Sentiment Scores
-- Trending Topics
-- Valid Tweets
-- External News Feeds
+- tweets
+- user_metadata
+- sentiment
+- trends
+- valid_tweets
 
-### Main Attributes
 
-- Tweet ID
-- User ID
-- Username
-- Tweet Text
-- Sentiment Score
-- Topic
-- Timestamp
-- Likes
-- Replies
-- Retweets
-- Impressions
-- Country
-- Language
-
----
 
 # 🏛 Medallion Architecture
 
@@ -431,5 +416,6 @@ dbt test
 # 👨‍💻 Author
 
 **Dara Naga Sai Sudheer**
+**chandrika**
 
 Azure Data Engineer | PySpark | Azure Databricks | Delta Lake | dbt | SQL | Python
